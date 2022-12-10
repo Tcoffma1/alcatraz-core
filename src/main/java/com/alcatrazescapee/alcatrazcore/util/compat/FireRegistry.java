@@ -45,6 +45,18 @@ public final class FireRegistry
         {
             FIRE_STARTERS.add(CoreHelpers.getStackByRegistryName("primal:fire_bow", OreDictionary.WILDCARD_VALUE));
         }
+        if (Loader.isModLoaded("pyrotech"))
+        {
+            FIRE_STARTERS.add(CoreHelpers.getStackByRegistryName("pyrotech:flint_and_tinder", OreDictionary.WILDCARD_VALUE));
+            FIRE_STARTERS.add(CoreHelpers.getStackByRegistryName("pyrotech:bow_drill", OreDictionary.WILDCARD_VALUE));
+            FIRE_STARTERS.add(CoreHelpers.getStackByRegistryName("pyrotech:bow_drill_durable_spindle", OreDictionary.WILDCARD_VALUE));
+            FIRE_STARTERS.add(CoreHelpers.getStackByRegistryName("pyrotech:matchstick", OreDictionary.WILDCARD_VALUE));
+        }
+        if (Loader.isModLoaded("metallurgy"))
+        {
+            FIRE_STARTERS.add(CoreHelpers.getStackByRegistryName("metallurgy:flint_and_ignatius", OreDictionary.WILDCARD_VALUE));
+            FIRE_STARTERS.add(CoreHelpers.getStackByRegistryName("metallurgy:flint_and_vulcanite", OreDictionary.WILDCARD_VALUE));
+        }
 
         FIRE_STARTERS.removeIf(ItemStack::isEmpty);
     }
